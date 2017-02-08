@@ -1,0 +1,8 @@
+html, body, .container {
+	height: 100%
+}
+
+.instructions {
+	text-align: center;
+	font-size: 1.5em;
+}
