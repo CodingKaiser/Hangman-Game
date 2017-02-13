@@ -38,13 +38,13 @@ var game = {
 				(this.guessedLetters.has(character)));
 			this._parseLetter(character);
 		}
-		if (this.guesses >= this.maxGuesses) {
-			this._resetValues();
-			this.start();
-		} else if (this._currentWordHasBeenGuessed()) {
+		if (this._currentWordHasBeenGuessed()) {
 			this._resetValues();
 			this.wins += 1;
 			this._updateWinsHTML();
+			this.start();
+		} else if (this.guesses >= this.maxGuesses) {
+			this._resetValues();
 			this.start();
 		}
 	},
